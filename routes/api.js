@@ -9,6 +9,7 @@ db = new sqlite.Database("./db.sqlite", sqlite.OPEN_READWRITE, (err) => {
     console.log('Connected to the database.');
 });
 
+
 router.get('/', function(req, res, next) {
     sql= "SELECT * FROM quote";
     db.all(sql, [], (err, rows) => {
